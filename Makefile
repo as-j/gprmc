@@ -4,10 +4,10 @@ gprmc: gprmc.c
 clean:
 	rm -f gprmc
 	
-FILES = 4sentence mixed broken resync
+FILES = 4sentence mixed broken resync limit
 $(FILES):
 	@echo -n Checking $@...
-	@./gprmc < data/$(@).txt > out.txt && cmp out.txt data/valid/$(@)_out.txt
+	@./gprmc < data/$(@).txt > out.txt && diff -u out.txt data/valid/$(@)_out.txt
 	@rm -f out.txt
 	@echo 	OK!
 

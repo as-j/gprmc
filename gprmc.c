@@ -205,7 +205,7 @@ int main(int argc, char **argv) {
 	
 	int num = 0;
     while ((linelen = getline(&line, &linecap, stdin)) > 0) {
-		if(++num >= 100)
+		if(num++ >= 100)
 			break;
 		
 		if (!isNmeaLine(line, linelen)) {
