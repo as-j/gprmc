@@ -1,5 +1,5 @@
 gprmc: gprmc.c 
-	$(CC) -Wall -ansi -o $@ $<
+	$(CC) -Wall -std=c99 -D_GNU_SOURCE -o $@ $<
 
 clean:
 	rm -f gprmc
