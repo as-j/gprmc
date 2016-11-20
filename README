@@ -1,0 +1,13 @@
+NMEA RMC parser
+
+Takes NMEA RMC strings from stdin and produces parsed results on stdout, of the format:
+
+[Time], [Latitude], [Longitude]
+
+Where:
+
+Time is Hours:Minute:Second
+Latitude is decimal degrees with north positive and south negative
+Longitude if decimal degrees with east positive and west negative
+
+Limits: Input is limited to 100 strings.
